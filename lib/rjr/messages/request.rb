@@ -84,10 +84,13 @@ class Request
 
   # Convert request message to json
   def to_json(*a)
+    params = @jr_args
+    params = params[0] if params.size == 1 and params[0].is_a?(Hash)
+    
     {'jsonrpc' => '2.0',
      'id'      => @msg_id,
      'method'  => @jr_method,
-     'params'  => @jr_args}.merge(@headers).to_json(*a)
+     'params'  => params}.merge(@headers).to_json(*a)
   end
 
   # Convert request to string format
