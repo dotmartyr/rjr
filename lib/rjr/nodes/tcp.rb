@@ -170,9 +170,11 @@ class TCP < RJR::Node
     # TODO optional timeout for response ?
     result = wait_for_result(message)
 
-    if result.size > 2
-      raise Exception, result[2]
-    end
+    #handle the exception on our end.
+    
+    #if result.size > 2
+    #  raise Exception, result[2]
+    #end
     return result[1]
   end
 
