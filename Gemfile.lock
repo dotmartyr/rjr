@@ -1,0 +1,58 @@
+PATH
+  remote: .
+  specs:
+    rjr (0.19.1)
+      eventmachine
+      json (>= 1.7.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.6)
+    cookiejar (0.3.2)
+    diff-lcs (1.2.5)
+    em-http-request (1.0.3)
+      addressable (>= 2.2.3)
+      cookiejar
+      em-socksify
+      eventmachine (>= 1.0.0.beta.4)
+      http_parser.rb (>= 0.5.3)
+    em-socksify (0.3.0)
+      eventmachine (>= 1.0.0.beta.4)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    em-websocket-client (0.1.2)
+      eventmachine
+      websocket
+    eventmachine (1.0.3)
+    eventmachine_httpserver (0.2.1)
+    http_parser.rb (0.6.0)
+    json (1.8.1)
+    rake (10.3.2)
+    rspec (3.0.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+    rspec-core (3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.0)
+    websocket (1.1.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  em-http-request (~> 1.0.3)
+  em-websocket
+  em-websocket-client (>= 0.1.2)
+  eventmachine_httpserver
+  json (>= 1.7.6)
+  rake
+  rjr!
+  rspec
