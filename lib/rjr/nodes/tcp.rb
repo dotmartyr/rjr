@@ -214,6 +214,19 @@ class TCP < RJR::Node
     #sleep 0.01 until conn.get_outbound_data_size == 0
     nil
   end
+
+  # Close (and unbind) from specific TCPConnection given a host/port.
+  def close_connection(host, port)
+    c = connections.find { |c| c.host == host and c.port == port.to_i }
+    
+    if c
+      c.close_connection_after_writing
+      c.unbind
+    else
+      nil
+    end
+  end
+
 end # class TCP
 
 end # module Nodes
